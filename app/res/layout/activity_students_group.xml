@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/default_padding"
+    android:orientation="vertical"
+    tools:context=".StudentsGroupActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        tools:srcCompat="@drawable/Group"
+        android:layout_marginTop="@dimen/default_padding"
+        android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/txtimgGrp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top|end"
+            android:text="@string/grp_txt"
+            android:textSize="@dimen/default_text_size"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:id="@+id/txtimgFacult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_padding"
+            android:gravity="bottom|center"
+            android:text="@string/faculty_txt"
+            android:textSize="@dimen/default_text_size"
+            tools:ignore="SpUsage" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/grp_number_txt"
+            android:textSize="@dimen/default_text_size"
+            tools:ignore="SpUsage" />
+
+        <EditText
+            android:id="@+id/txtGrpNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:autofillHints="Группа"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            tools:ignore="LabelFor,TextFields,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/faculty_txt"
+        android:textSize="@dimen/default_text_size"
+        android:layout_marginTop="@dimen/default_padding"
+        tools:ignore="SpUsage" />
+
+    <EditText
+        android:id="@+id/facultyEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="Факультет"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_padding"
+            tools:ignore="UselessParent">
+        <TextView android:text="@string/edu_level_txt" />
+        <RadioGroup>
+
+            <RadioButton
+                android:id="@+id/edu_level_bachelor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edu_level_bachelor_txt" />
+
+            <RadioButton
+                android:id="@+id/edu_level_master"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edu_level_master_txt" />
+            </RadioGroup>
+        </TableRow>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+            <TextView android:text="@string/additional_flg_txt" />
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/contract_flg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/contract_flg_txt" />
+
+                    <CheckBox
+                        android:id="@+id/privilege_flg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/privilege_flg_txt" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/onOkBtnClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding"
+        android:gravity="end"
+        android:minHeight="48dp"
+        android:onClick="OkBtnClick"
+        android:text="@string/btn_ok_txt"
+        android:textSize="@dimen/default_text_size"
+        tools:ignore="SpUsage,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_add_grp"
+        android:orderInCategory="1"
+        android:title="Додати" />
+    <item
+        android:id="@+id/action_share"
+        android:orderInCategory="2"
+        android:title="Поділитися" />
+</menu>
